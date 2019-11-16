@@ -1,0 +1,765 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.TheOn.org#"
+     xml:base="http://www.TheOn.org"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.TheOn.org">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl"/>
+        <owl:imports rdf:resource="http://www.purl.org/drammar/0.9"/>
+        <owl:imports rdf:resource="https://w3id.org/lso/intro/beta201901"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://erlangen-crm.org/current/P150_defines_typical_parts_of -->
+
+    <rdf:Description rdf:about="http://erlangen-crm.org/current/P150_defines_typical_parts_of">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#GenericAction"/>
+        <rdfs:domain rdf:resource="http://www.TheOn.org#RitualAction"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#Agent"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#Object"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Action"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#DramaEndurant"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P150i_defines_typical_wholes_for -->
+
+    <rdf:Description rdf:about="http://erlangen-crm.org/current/P150i_defines_typical_wholes_for">
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#Action"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#DramaEndurant"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#GenericAction"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#RitualAction"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Agent"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Object"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.TheOn.org#affects -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#affects">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#GenericAction"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#contains_literary_motif -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#contains_literary_motif">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta201901#INT_Motif"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#has_category -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#has_category">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Epithet"/>
+        <rdfs:domain rdf:resource="http://www.TheOn.org#RitualAction"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Entreaty"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Epithet_action"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Generic_UnintentialProcess"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Invocation"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Mental_UnintentionalProcess"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Physical_UnintentionalProcess"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Physical_feature"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Prayer"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Sacrifice"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Specific_UnintentionalProcess"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Vow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#has_concept -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#has_concept">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Agent"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#has_consequence -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#has_consequence">
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#Action"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#has_textual_concretization -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#has_textual_concretization">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Dramatic_mechanism"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#has_unit -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#has_unit">
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#Process"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Action"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#DramaEndurant"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Process"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_caused_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_caused_by">
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_characterization_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_characterization_of">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_interepreted_as -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_interepreted_as">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta201901#INT1_TextPassage"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Formal_Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_object_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_object_of">
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_prerogative_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_prerogative_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.TheOn.org#is_characterization_of"/>
+        <owl:inverseOf rdf:resource="http://www.TheOn.org#is_subject_of"/>
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Deus_Ex_Machina"/>
+        <rdfs:domain rdf:resource="http://www.TheOn.org#RitualAction"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_presented_as -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_presented_as">
+        <rdfs:domain rdf:resource="http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Animal"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_represented_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_represented_by">
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#Process"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Formal_Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_subject_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#is_subject_of">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <rdfs:range rdf:resource="http://www.TheOn.org#Deus_Ex_Machina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TheOn.org#takes_part_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.TheOn.org#takes_part_in">
+        <rdfs:domain rdf:resource="http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent"/>
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.essepuntato.it/2008/12/pattern#contains -->
+
+    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#contains">
+        <rdfs:range rdf:resource="http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes">
+        <rdfs:range rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant">
+        <rdfs:range rdf:resource="http://www.TheOn.org#Formal_Expression"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#R18_shows_actualization -->
+
+    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta201901#R18_shows_actualization">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Formal_Expression"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#R4_defines -->
+
+    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta201901#R4_defines">
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TheOn.org#has_epithet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TheOn.org#has_epithet">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TheOn.org#is_induced -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TheOn.org#is_induced">
+        <rdfs:domain rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TheOn.org#means -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TheOn.org#means">
+        <rdfs:domain rdf:resource="http://www.TheOn.org#Epithet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#R44_has_wording -->
+
+    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta201901#R44_has_wording">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TheOn.org#Animal -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Animal">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Chorus -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Chorus">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#Dramatic_mechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Deus_Ex_Machina -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Deus_Ex_Machina">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#Dramatic_mechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Divine_Entity -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Divine_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Dramatic_mechanism -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Dramatic_mechanism">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT_GenreSpecifics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Entreaty -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Entreaty">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#RitualAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Epithet -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Epithet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT_Figure_of_Speech"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Epithet_action -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Epithet_action">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#Epithet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Formal_Expression -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Formal_Expression">
+        <owl:disjointWith rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#GenericAction -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#GenericAction">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Generic_UnintentialProcess -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Generic_UnintentialProcess">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Human_Entity -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Human_Entity">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Hybris -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Hybris">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT_Topos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Invocation -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Invocation">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#RitualAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Mental_UnintentionalProcess -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Mental_UnintentionalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Metrical_verses -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Metrical_verses">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Physical_UnintentionalProcess -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Physical_UnintentionalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Physical_feature -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Physical_feature">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#Epithet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Prayer -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Prayer">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#RitualAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Punishment -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Punishment">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#GenericAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Revenge -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Revenge">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#GenericAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#RitualAction -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#RitualAction">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Sacrifice -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Sacrifice">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#RitualAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Specific_UnintentionalProcess -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Specific_UnintentionalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#UnintentionalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TheOn.org#Vow -->
+
+    <owl:Class rdf:about="http://www.TheOn.org#Vow">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#RitualAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent -->
+
+    <owl:Class rdf:about="http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#InformationEntity -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#InformationEntity">
+        <owl:disjointWith rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#Meaning">
+        <owl:disjointWith rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.purl.org/drammar#DramaEndurant -->
+
+    <rdf:Description rdf:about="http://www.purl.org/drammar#DramaEndurant">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.purl.org/drammar#DramaEntity -->
+
+    <owl:Class rdf:about="http://www.purl.org/drammar#DramaEntity"/>
+    
+
+
+    <!-- http://www.purl.org/drammar#Process -->
+
+    <owl:Class rdf:about="http://www.purl.org/drammar#Process">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#DramaEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/drammar#UnintentionalProcess -->
+
+    <owl:Class rdf:about="http://www.purl.org/drammar#UnintentionalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/drammar#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT1_TextPassage -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT1_TextPassage"/>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature -->
+
+    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature">
+        <rdfs:subClassOf rdf:resource="http://www.TheOn.org#Formal_Expression"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT8_RhetoricalFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT9_SemanticFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta201901#INT2_ActualizationOfFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TheOn.org#Agamemnon -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Agamemnon">
+        <rdf:type rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Apollo -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Apollo">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Athena -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Athena">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Cassandra -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Cassandra">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Children -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Children">
+        <rdf:type rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Cipride -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Cipride">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Clitemnestra -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Clitemnestra">
+        <rdf:type rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Creon -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Creon">
+        <rdf:type rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Ecuba -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Ecuba">
+        <rdf:type rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Medea -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Medea">
+        <rdf:type rdf:resource="http://www.TheOn.org#Human_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Persuasion -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Persuasion">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Poseidon -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Poseidon">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Prometheus -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Prometheus">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Temi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Temi">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TheOn.org#Zeus -->
+
+    <owl:NamedIndividual rdf:about="http://www.TheOn.org#Zeus">
+        <rdf:type rdf:resource="http://www.TheOn.org#Divine_Entity"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
